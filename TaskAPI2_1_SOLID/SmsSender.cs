@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace TaskAPI2_1_SOLID
 {
-    public class EmailSender : INotificationSender
+    // Реализация SMS отправителя
+    public class SmsSender : INotificationSender
     {
         public void Send(string? recipient, string? message)
         {
-            string formattedMessage = $"Email уведомление: {message}";
-            Console.WriteLine($"Email для {recipient}: {formattedMessage}");
+            string formattedMessage = $"SMS: {message}";
+            Console.WriteLine($"SMS для {recipient}: {formattedMessage}");
         }
     }
 }

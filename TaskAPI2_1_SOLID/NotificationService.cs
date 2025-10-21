@@ -6,25 +6,35 @@ using System.Threading.Tasks;
 
 namespace TaskAPI2_1_SOLID
 {
-    internal class NotificationService
+    public class NotificationService
     {
-        private readonly EmailSender _emailSender;
+        private readonly INotificationSender _notificationSender;
+        private readonly ILogger _logger;
 
-        public NotificationService()
+        public NotificationService(INotificationSender notificationSender, ILogger logger)
         {
-            _emailSender = new EmailSender(); // Нарушение: жесткая привязка
+            _notificationSender = notificationSender;
+            _logger = logger;
         }
 
-        public void SendNotification(string message, string recipient)
+        public void SendNotification(string? message, string? recipient)
         {
-            // Логика подготовки уведомления
-            string formattedMessage = $"Уведомление: {message}";
+            try
+            {
+                // Логика подготовки уведомления
+                string formattedMessage = $"Уведомление: {message}";
 
-            // Отправка email
-            _emailSender.SendEmail(recipient, formattedMessage);
+                // Отправка уведомления через выбранный канал
+                _notificationSender.Send(recipient, formattedMessage);
 
-            // Нарушение: запись в лог внутри сервиса
-            File.WriteAllText("log.txt", $"Отправлено уведомление для {recipient}");
+                // Логирование через отдельный сервис
+                _logger.Log($"Отправлено уведомление для {recipient}");
+            }
+            catch (Exception ex)
+            {
+                _logger.Log($"Ошибка при отправке уведомления для {recipient}: {ex.Message}");
+                throw;
+            }
         }
     }
 }
