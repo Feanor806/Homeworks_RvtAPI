@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace TaskAPI3_1_Sample
 {
@@ -18,26 +19,21 @@ namespace TaskAPI3_1_Sample
 
         public Result OnStartup(UIControlledApplication application)
         {
-            string assemblyPath = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            string assemblyPath = @"C:\Revit SDK 2019\Software Development Kit\Samples\ScheduleCreation\CS\bin\Debug\ScheduleCreation.dll";
             try
             {
-                application.CreateRibbonTab("Общее");
+                application.CreateRibbonTab("ПИК-Привет");
             }
             catch { }
 
-            RibbonPanel panel = application.GetRibbonPanels("Общее").FirstOrDefault(rp => rp.Name == "ПИК-Привет") ?? null;
+            RibbonPanel panel = application.GetRibbonPanels("ПИК-Привет").FirstOrDefault(rp => rp.Name == "Общее") ?? null;
 
             if (panel == null)
             {
-                panel = application.CreateRibbonPanel("Общее", "ПИК-Привет");
+                panel = application.CreateRibbonPanel("ПИК-Привет", "Общее");
             }
-            PushButton testRooms = panel.AddItem(new PushButtonData("testRooms", "Помещения", assemblyPath, "WindowOrientationPlugIn.WindowOrientation")) as PushButton;
-            testRooms.ToolTip = "Плагин для определения ориентации окон по сторонам горизонта\n\n Версия: v0.5. Автор: Михаил Солнцев";
-            testRooms.LongDescription = "Плагин выполняет анализ ориентации и обмер элементов категорий \"Окна\", \"Двери\" и витражи, которые граничат с наружным воздухом.\n" +
-                                        "Ориентация определяется в зависимости от положения элемента относительно условного и истенного севера модели\n" +
-                                        "Также плагин формирует файл с заданием для передачи отделу ЭЭ";
-            testRooms.SetContextualHelp(new ContextualHelp(ContextualHelpType.Url, "https://disk.yandex.ru/i/Ty4_njHOqaSD4Q"));
-            testRooms.LargeImage = new BitmapImage(new Uri(Path.GetDirectoryName(assemblyPath) + @"\32x32_WO_pict.png"));
+            PushButton testRooms = panel.AddItem(new PushButtonData("sampleShedule", "Спецификация стен", assemblyPath, "Revit.SDK.Samples.ScheduleCreation.CS.Command")) as PushButton;
+
             return Result.Succeeded;
         }
     }
