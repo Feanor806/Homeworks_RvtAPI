@@ -27,7 +27,6 @@ namespace TaskAPI4_WallStatistics
                 TaskDialog.Show("В модели нет стен","В модели нет размещенных стен");
                 return Result.Failed;
             }
-            docWalls = docWalls.OrderBy(w => (w.Location as LocationCurve).Curve.Length).ToList();
 
             double maxlength = 0.0;
             double minlength = 0.0;
@@ -67,7 +66,7 @@ namespace TaskAPI4_WallStatistics
                 transaction.Commit();
             }
 
-            TaskDialog.Show("Стены определены", $"Стена {longWallId.IntegerValue} с наибольшей длиной {Math.Round(maxlength*304.8,0)} мм\nСтена {shortWallId.IntegerValue} с наименьшей длиной {Math.Round(minlength * 304.8, 0)} мм");
+            TaskDialog.Show("Стены определены", $"Всего стен в модели:{docWalls.Count}\nСтена {longWallId.IntegerValue} с наибольшей длиной {Math.Round(maxlength*304.8,0)} мм\nСтена {shortWallId.IntegerValue} с наименьшей длиной {Math.Round(minlength * 304.8, 0)} мм");
             return Result.Failed;
         }
     }
