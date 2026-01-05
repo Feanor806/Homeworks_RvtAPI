@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Assembly>TaskAPI3_1_Sample.dll</Assembly>
+		<FullClassName>TaskAPI3_1_Sample.Application</FullClassName>
+		<AddInId>7e9ed9e6-ce94-4f6f-8b5a-a94492ae6d27</AddInId>
+		<Name>ПИК</Name>
+		<VendorId>PIK</VendorId>
+		<VendorDescription>PIK ПИК</VendorDescription>
+	</AddIn>
+</RevitAddIns>
