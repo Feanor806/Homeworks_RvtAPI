@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI1_1_YAGNI_KISS_DRY", "TaskAPI1_1_YAGNI_KISS_DRY\TaskAPI1_1_YAGNI_KISS_DRY.csproj", "{9D3701A2-1D7F-4870-B35F-13512FD070CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI2_1_SOLID", "TaskAPI2_1_SOLID\TaskAPI2_1_SOLID.csproj", "{CBF81490-1992-48A0-AD64-515179FF29D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI5_1_Selections", "TaskAPI5_1_Selections\TaskAPI5_1_Selections.csproj", "{B7453E85-D97B-40F5-8E16-C0217FBEF784}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,15 @@ Global
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBF08666-7938-4AD9-A086-653A05B9CAA1}
 	EndGlobalSection
 EndGlobal
