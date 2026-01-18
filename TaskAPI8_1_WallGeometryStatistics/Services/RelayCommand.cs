@@ -9,15 +9,8 @@ namespace TaskAPI8_1_WallGeometryStatistics.Services
 {
     public class RelayCommand : ICommand
     {
-
         private readonly Action<object> _exectute;
         private readonly Func<object, bool> _canExecute;
-
-        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
-        {
-            _exectute = execute ?? throw new ArgumentNullException(nameof(execute));
-            _canExecute = canExecute;
-        }
 
         public event EventHandler CanExecuteChanged
         {
@@ -25,11 +18,14 @@ namespace TaskAPI8_1_WallGeometryStatistics.Services
             remove => CommandManager.RequerySuggested -= value;
         }
 
+        public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+        {
+            _exectute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute;
+        }
+
         public bool CanExecute(object parameter) => _canExecute?.Invoke(parameter) ?? true;
 
-        public void Execute(object parameter)
-        {
-            _exectute(parameter);
-        }
+        public void Execute(object parameter) => _exectute(parameter);
     }
 }
