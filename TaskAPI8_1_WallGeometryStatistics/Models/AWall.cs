@@ -15,6 +15,6 @@ namespace TaskAPI8_1_WallGeometryStatistics.Models
         public double Thickness { get; set; }
         public double Volume { get; set; }
         public double Area { get; set; }
-        public double Distance { get; set; }
+        public bool Status { get; set; }
     }
 }

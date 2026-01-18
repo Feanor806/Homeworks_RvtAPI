@@ -9,7 +9,7 @@ namespace TaskAPI8_1_WallGeometryStatistics.Services
 {
     public class RelayCommand : ICommand
     {
-        private readonly Action<object> _exectute;
+        private readonly Action<object> _execute;
         private readonly Func<object, bool> _canExecute;
 
         public event EventHandler CanExecuteChanged
@@ -20,12 +20,12 @@ namespace TaskAPI8_1_WallGeometryStatistics.Services
 
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
-            _exectute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
         }
 
         public bool CanExecute(object parameter) => _canExecute?.Invoke(parameter) ?? true;
 
-        public void Execute(object parameter) => _exectute(parameter);
+        public void Execute(object parameter) => _execute(parameter);
     }
 }
