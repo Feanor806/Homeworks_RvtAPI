@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI1_1_YAGNI_KISS_DRY",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI2_1_SOLID", "TaskAPI2_1_SOLID\TaskAPI2_1_SOLID.csproj", "{CBF81490-1992-48A0-AD64-515179FF29D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI4_WallStatistics", "TaskAPI4_WallStatistics\TaskAPI4_WallStatistics.csproj", "{E4D09354-34BD-4069-8BCD-B11345F29052}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI3_1_Sample", "TaskAPI3_1_Sample\TaskAPI3_1_Sample.csproj", "{7E9ED9E6-CE94-4F6F-8B5A-A94492AE6D27}"
 EndProject
 Global
@@ -27,9 +29,16 @@ Global
 		{7E9ED9E6-CE94-4F6F-8B5A-A94492AE6D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E9ED9E6-CE94-4F6F-8B5A-A94492AE6D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E9ED9E6-CE94-4F6F-8B5A-A94492AE6D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D09354-34BD-4069-8BCD-B11345F29052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D09354-34BD-4069-8BCD-B11345F29052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D09354-34BD-4069-8BCD-B11345F29052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D09354-34BD-4069-8BCD-B11345F29052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A7A7475-1A82-4BE1-B3E8-408C83D989C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BD50AF9-D644-476A-803C-391A882A981F}
