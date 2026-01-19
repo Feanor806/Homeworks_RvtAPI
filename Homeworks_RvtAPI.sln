@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI1_1_YAGNI_KISS_DRY",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI2_1_SOLID", "TaskAPI2_1_SOLID\TaskAPI2_1_SOLID.csproj", "{CBF81490-1992-48A0-AD64-515179FF29D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI7_1_Solids", "TaskAPI7_1_Solids\TaskAPI7_1_Solids.csproj", "{B81C08D6-E35B-4A66-9617-C5FC97E42C38}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI5_1_Selections", "TaskAPI5_1_Selections\TaskAPI5_1_Selections.csproj", "{B7453E85-D97B-40F5-8E16-C0217FBEF784}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskAPI4_WallStatistics", "TaskAPI4_WallStatistics\TaskAPI4_WallStatistics.csproj", "{E4D09354-34BD-4069-8BCD-B11345F29052}"
@@ -29,6 +31,10 @@ Global
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBF81490-1992-48A0-AD64-515179FF29D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81C08D6-E35B-4A66-9617-C5FC97E42C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81C08D6-E35B-4A66-9617-C5FC97E42C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81C08D6-E35B-4A66-9617-C5FC97E42C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81C08D6-E35B-4A66-9617-C5FC97E42C38}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7453E85-D97B-40F5-8E16-C0217FBEF784}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,6 +54,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {427346F9-4955-45F3-B6C1-46BEE2166355}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBF08666-7938-4AD9-A086-653A05B9CAA1}
