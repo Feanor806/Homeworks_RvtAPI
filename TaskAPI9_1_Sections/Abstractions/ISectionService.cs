@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace TaskAPI9_1_Sections.Abstractions
 {
-    internal interface ISectionService
+    public interface ISectionService
     {
-        FamilyInstance PickObject();
+        bool CreateSection(FamilyInstance familyInstance, double widthOffsetMm, double heightOffsetMm, double depthOffsetMm, string sectionName);
     }
 }

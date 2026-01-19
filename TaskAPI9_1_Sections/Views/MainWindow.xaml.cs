@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskAPI9_1_Sections.ViewModels;
 
 namespace TaskAPI9_1_Sections.Views
 {
@@ -19,8 +20,9 @@ namespace TaskAPI9_1_Sections.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(MainWindowViewModel mainWindowViewModel)
         {
+            DataContext = mainWindowViewModel;
             InitializeComponent();
         }
     }
