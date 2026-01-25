@@ -17,7 +17,7 @@ namespace TaskAPI10_1_InstanceAdding.ViewModels
         public MainWindowViewModel(IPlacementService placementService)
         {
             PlaceCommand = new RelayCommand(PlaceFurniture);
-            FurnitireTypes = new ObservableCollection<FurnitureType> 
+            FurnitureTypes = new ObservableCollection<FurnitureType> 
             {
                 FurnitureType.Table,
                 FurnitureType.Chair,
@@ -41,7 +41,7 @@ namespace TaskAPI10_1_InstanceAdding.ViewModels
             }
         }
 
-        public ObservableCollection<FurnitureType> FurnitireTypes { get; }
+        public ObservableCollection<FurnitureType> FurnitureTypes { get; }
 
         public FurnitureType SelectedFurnitureType 
         { 

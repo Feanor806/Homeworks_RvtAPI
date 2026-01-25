@@ -65,9 +65,13 @@ namespace TaskAPI10_1_InstanceAdding.Services
             {
                 double step = UnitUtils.ConvertToInternalUnits(2, DisplayUnitType.DUT_METERS);
                 var points = new List<XYZ>();
-                for (int i = 0; i < count; i++)
+                int rowMax = (int)Math.Ceiling(Math.Sqrt(count));
+                for(int i = 0; i < rowMax; i++)
                 {
-                    points.Add(new XYZ(i * step, 0, 0));
+                    for (int j = 0; (j < rowMax) && (i*rowMax + j < count); j++)
+                    {
+                        points.Add(new XYZ(j * step, i * step, 0));
+                    }
                 }
 
                 var level = new FilteredElementCollector(_document)
